@@ -1,14 +1,16 @@
+$content = @'
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
     <addon id="repository.meyistvision" name="Meyist Vision Repository" version="1.0.0" provider-name="Meyist">
         <requires>
-            <import addon="xbmc.addon.repository" version="1.0.0"/>
+            <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
         <extension point="xbmc.addon.repository" name="Meyist Vision Repository">
-            <dir>
-                <info compressed="false">https://mmah47864.github.io/Meyist_Build/addons.xml</info>
-                <checksum>https://mmah47864.github.io/Meyist_Build/addons.xml.md5</checksum>
-                <datadir zip="true">https://mmah47864.github.io/Meyist_Build/</datadir>
+            <dir minversion="20.0.0">
+                <info compressed="false">https://raw.github.com/mmah47864/Meyist_Build/main/addons.xml</info>
+                <checksum>https://raw.github.com/mmah47864/Meyist_Build/main/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.github.com/mmah47864/Meyist_Build/main</datadir>
+                <hashes>false</hashes>
             </dir>
         </extension>
         <extension point="xbmc.addon.metadata">
@@ -28,8 +30,17 @@
         <extension point="xbmc.service" library="startup.py" start="startup"/>
         <extension point="xbmc.addon.metadata">
             <summary lang="fr">Wizard multimedia par Meyist</summary>
-            <description lang="fr">Installez le build Meyist Vision pour une experience VOD et IPTV optimisee.</description>
             <platform>all</platform>
         </extension>
     </addon>
 </addons>
+'@
+
+$content | Out-File -FilePath "C:\Users\moha9\Documents\MEYISTVISION-REPO\addons.xml" -Encoding UTF8 -NoNewline
+
+cd "C:\Users\moha9\Documents\MEYISTVISION-REPO"
+git add addons.xml
+git commit -m "Fix: utilisation raw.github.com + format dregs"
+git push
+
+Write-Host "Done !"
