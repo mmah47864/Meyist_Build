@@ -10,7 +10,7 @@
             <datadir zip="true">https://mmah47864.github.io/Meyist_Build/</datadir>
         </extension>
         <extension point="xbmc.addon.metadata">
-            <summary lang="fr">Dépôt officiel Meyist Vision</summary>
+            <summary lang="fr">Depot officiel Meyist Vision</summary>
             <platform>all</platform>
         </extension>
     </addon>
@@ -25,8 +25,8 @@
         </extension>
         <extension point="xbmc.service" library="startup.py" start="startup"/>
         <extension point="xbmc.addon.metadata">
-            <summary lang="fr">Wizard multimédia par Meyist</summary>
-            <description lang="fr">Installez le build Meyist Vision pour une expérience VOD et IPTV optimisée.</description>
+            <summary lang="fr">Wizard multimedia par Meyist</summary>
+            <description lang="fr">Installez le build Meyist Vision pour une experience VOD et IPTV optimisee.</description>
             <platform>all</platform>
         </extension>
     </addon>
