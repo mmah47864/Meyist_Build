@@ -34,13 +34,3 @@ $content = @'
         </extension>
     </addon>
 </addons>
-'@
-
-$content | Out-File -FilePath "C:\Users\moha9\Documents\MEYISTVISION-REPO\addons.xml" -Encoding UTF8 -NoNewline
-
-cd "C:\Users\moha9\Documents\MEYISTVISION-REPO"
-git add addons.xml
-git commit -m "Fix: utilisation raw.github.com + format dregs"
-git push
-
-Write-Host "Done !"
